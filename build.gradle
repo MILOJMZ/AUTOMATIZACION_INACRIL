@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+group = 'co.com.inacril'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'net.serenity-bdd:serenity-core:2.4.34'
+    implementation 'net.serenity-bdd:serenity-screenplay:2.4.34'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:2.4.34'
+    implementation 'net.serenity-bdd:serenity-cucumber6:2.4.34'
+    implementation 'net.serenity-bdd:serenity-junit:2.4.34'
+
+    implementation 'org.slf4j:slf4j-simple:1.7.30'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJUnit()
+    systemProperties = System.getProperties()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
