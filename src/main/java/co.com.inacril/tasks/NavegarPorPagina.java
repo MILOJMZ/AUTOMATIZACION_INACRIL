@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import org.openqa.selenium.NoAlertPresentException;
 
 import static co.com.inacril.userinterface.Navegacion.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -43,7 +44,38 @@ public class NavegarPorPagina implements Task {
                 JavaScriptClick.on(DOMOS),
 
                 WaitUntil.the(SCROLLD, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
-                JavaScriptClick.on(SCROLLD)
+                JavaScriptClick.on(SCROLLD),
+
+                WaitUntil.the(HOGAR, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(HOGAR, isClickable()).forNoMoreThan(15).seconds(),
+                JavaScriptClick.on(HOGAR),
+
+                WaitUntil.the(INDEX, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                Click.on(INDEX),
+
+                WaitUntil.the(LAMINAS, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(LAMINAS, isClickable()).forNoMoreThan(15).seconds(),
+                JavaScriptClick.on(LAMINAS),
+
+                WaitUntil.the(INDEX, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                Click.on(INDEX),
+
+                WaitUntil.the(SERVICIOS, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(SERVICIOS, isClickable()).forNoMoreThan(15).seconds(),
+                JavaScriptClick.on(SERVICIOS),
+
+                WaitUntil.the(ASESORIA, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(ASESORIA, isClickable()).forNoMoreThan(15).seconds(),
+                JavaScriptClick.on(ASESORIA),
+
+                JavaScriptClick.on(NOSOTROS),
+
+                WaitUntil.the(OFICINAS, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(OFICINAS, isClickable()).forNoMoreThan(15).seconds(),
+                JavaScriptClick.on(OFICINAS)
+
+
+
         );
     }
 

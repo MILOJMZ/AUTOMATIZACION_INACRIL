@@ -30,5 +30,23 @@ public class Navegacion {
     public static final Target SCROLLD = Target.the("bajar al footer de domos y cupulas ")
             .located(By.xpath("/html/body/div[1]/header/div/div[1]/div/a/img"));
 
+    public static final Target HOGAR = Target.the("Entrar al apartado de hogar del Header ")
+            .located(By.xpath("//*[@id=\"menu-1-17bfe60\"]/li[4]/a"));
+
+    public static final Target LAMINAS = Target.the("Entrar al apartado de laminas del Header")
+            .located(By.xpath("//*[@id=\"menu-1-17bfe60\"]/li[5]/a"));
+
+    public static final Target SERVICIOS = Target.the("Entrar al apartado de servicios del Header ")
+            .located(By.xpath("/html/body/div[1]/div[3]/div[2]/div[2]/div[1]/div/nav[1]/ul/li[6]/a"));
+
+    public static final Target ASESORIA = Target.the("Entrar al apartado de asesoria del Header ")
+            .located(By.xpath("/html/body/div[1]/div[3]/div[2]/div[2]/div[1]/div/nav[1]/ul/li[6]/ul/li[1]/a"));
+
+    public static final Target NOSOTROS = Target.the("Entrar al apartado de servicios del Header ")
+            .located(By.xpath("document.querySelector(\"#Layer_1 > path\")"));
+
+    public static final Target OFICINAS = Target.the("Entrar al apartado de servicios del Header ")
+            .located(By.xpath("/html/body/div[1]/div[1]/div[2]/div[5]/div/div/a/svg"));
+
 
 }
