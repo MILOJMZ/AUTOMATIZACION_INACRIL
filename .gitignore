@@ -1,0 +1,13 @@
+# IDE
+.idea/
+*.iml
+
+# Build y binarios
+.gradle/
+build/
+target/
+*.class
+*.jar
+
+# Serenity reports
+target/site/serenity/
