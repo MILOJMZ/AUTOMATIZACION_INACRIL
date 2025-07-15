@@ -6,7 +6,12 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.remote.server.handler.ExecuteScript;
 
 import static co.com.inacril.userinterface.Navegacion.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -68,14 +73,21 @@ public class NavegarPorPagina implements Task {
                 WaitUntil.the(ASESORIA, isClickable()).forNoMoreThan(15).seconds(),
                 JavaScriptClick.on(ASESORIA),
 
+                Scroll.to(HOME),
+                WaitUntil.the(HOME, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(HOME, isClickable()).forNoMoreThan(15).seconds(),
+                JavaScriptClick.on(HOME),
+
+                WaitUntil.the(NOSOTROS, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                WaitUntil.the(NOSOTROS, isClickable()).forNoMoreThan(15).seconds(),
                 JavaScriptClick.on(NOSOTROS),
+
+                WaitUntil.the(INDEX, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
+                Click.on(INDEX),
 
                 WaitUntil.the(OFICINAS, isCurrentlyVisible()).forNoMoreThan(15).seconds(),
                 WaitUntil.the(OFICINAS, isClickable()).forNoMoreThan(15).seconds(),
                 JavaScriptClick.on(OFICINAS)
-
-
-
         );
     }
 

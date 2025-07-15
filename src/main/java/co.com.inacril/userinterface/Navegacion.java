@@ -42,11 +42,14 @@ public class Navegacion {
     public static final Target ASESORIA = Target.the("Entrar al apartado de asesoria del Header ")
             .located(By.xpath("/html/body/div[1]/div[3]/div[2]/div[2]/div[1]/div/nav[1]/ul/li[6]/ul/li[1]/a"));
 
-    public static final Target NOSOTROS = Target.the("Entrar al apartado de servicios del Header ")
-            .located(By.xpath("document.querySelector(\"#Layer_1 > path\")"));
+    public static final Target HOME = Target.the("Logo Inacril")
+            .located(By.xpath("//a[@href='https://inacril.com']"));
+    public static final Target NOSOTROS = Target.the("Entrar al apartado de nosotros del Header ")
+            .located(By.xpath("/html/body/div[1]/div[3]/div[2]/div[2]/div[2]/div/div/a"));
 
-    public static final Target OFICINAS = Target.the("Entrar al apartado de servicios del Header ")
-            .located(By.xpath("/html/body/div[1]/div[1]/div[2]/div[5]/div/div/a/svg"));
+    public static final Target OFICINAS = Target.the("Botón oficinas")
+            .locatedBy("/html/body/div[1]/div[3]/div[2]/div[2]/div[3]/div/div/a");
+
 
 
 }
